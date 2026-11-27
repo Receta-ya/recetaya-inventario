@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/detalles-reserva")
+@RequestMapping({"/api/v1/detalles-reserva", "/api/detalles-reserva"})
 public class DetalleReservaController {
 
     @Autowired

@@ -47,12 +47,12 @@ Servidor: `http://localhost:8082`
 
 | Método | Endpoint | Función |
 |---|---|---|
-| GET | /api/medicamentos | Listar medicamentos |
-| POST | /api/medicamentos | Crear medicamento |
-| PUT | /api/medicamentos/{id} | Actualizar medicamento |
-| DELETE | /api/medicamentos/{id} | Eliminar medicamento |
-| GET | /api/stock | Consultar stock |
-| POST | /api/reservas | Crear reserva |
+| GET | /api/v1/medicamentos | Listar medicamentos |
+| POST | /api/v1/medicamentos | Crear medicamento |
+| PUT | /api/v1/medicamentos/{id} | Actualizar medicamento |
+| DELETE | /api/v1/medicamentos/{id} | Eliminar medicamento |
+| GET | /api/v1/stock | Consultar stock |
+| POST | /api/v1/reservas | Crear reserva |
 
 Las demás operaciones están implementadas en sus respectivos controladores.
 
@@ -77,3 +77,13 @@ Controller → Service → Repository → MySQL
 Se utiliza Spring Data JPA para la persistencia de datos.
 
 **Alcance:** CRUD de medicamentos y sucursales, gestión de stock, reservas y dispensación. La integración automática con otros microservicios no está implementada.
+
+## API REST v1
+
+Usa el prefijo `/api/v1` para clientes nuevos. Las rutas anteriores se conservan para clientes de la EP2.
+
+- `/api/v1/detalles-reserva`
+- `/api/v1/medicamentos`
+- `/api/v1/reservas`
+- `/api/v1/stock`
+- `/api/v1/sucursales`
